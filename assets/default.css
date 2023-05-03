@@ -474,7 +474,7 @@
   @apply block mb-2 text-sm font-medium text-gray-900 dark:text-gray-200;
 }
 .pc-label--for-checkbox {
-  @apply !mb-0 font-normal;
+  @apply mb-0 font-normal;
 }
 .pc-form-field-error {
   @apply mt-1 text-xs italic text-red-500;
@@ -1066,25 +1066,25 @@
 }
 
 label.has-error:not(.phx-no-feedback) {
-  @apply !text-red-900 dark:!text-red-200;
+  @apply text-red-900 dark:text-red-200;
 }
 
 textarea.has-error:not(.phx-no-feedback),
 input.has-error:not(.phx-no-feedback),
 select.has-error:not(.phx-no-feedback) {
-  @apply !border-red-500 focus:!border-red-500 !text-red-900 !placeholder-red-700 !bg-red-50 dark:!text-red-100 dark:!placeholder-red-300 dark:!bg-red-900 focus:!ring-red-500;
+  @apply border-red-500 focus:border-red-500 text-red-900 placeholder-red-700 bg-red-50 dark:text-red-100 dark:placeholder-red-300 dark:bg-red-900 focus:ring-red-500;
 }
 
 input[type="file_input"].has-error:not(.phx-no-feedback) {
-  @apply !border-red-500 !rounded-md focus:!border-red-500 !text-red-900 !placeholder-red-700 !bg-red-50 file:!border-none dark:!border-none dark:!bg-[#160B0B] dark:text-red-400;
+  @apply border-red-500 rounded-md focus:border-red-500 text-red-900 placeholder-red-700 bg-red-50 file:border-none dark:border-none dark:bg-[#160B0B] dark:text-red-400;
 }
 
 input[type="checkbox"].has-error:not(.phx-no-feedback) {
-  @apply !border-red-500 !bg-red-500 dark:!bg-red-800 !text-red-900 dark:!text-red-200;
+  @apply border-red-500 bg-red-500 dark:bg-red-800 text-red-900 dark:text-red-200;
 }
 
 input[type="radio"].has-error:not(.phx-no-feedback) {
-  @apply !border-red-500 !bg-red-500 dark:!bg-red-800 !text-red-900 dark:!text-red-200;
+  @apply border-red-500 bg-red-500 dark:bg-red-800 text-red-900 dark:text-red-200;
 }
 
 /* If in tailwind.config.json, darkMode: 'class', use this: */
