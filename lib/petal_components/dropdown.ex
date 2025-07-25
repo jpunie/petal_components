@@ -15,6 +15,8 @@ defmodule PetalComponents.Dropdown do
   attr :options_container_id, :string
   attr :label, :string, default: nil, doc: "labels your dropdown option"
   attr :class, :any, default: nil, doc: "any extra CSS class for the parent container"
+  attr :disabled, :boolean, default: false,
+    doc: "disables the dropdown if true"
 
   attr :trigger_class, :string,
     default: nil,
@@ -62,10 +64,11 @@ defmodule PetalComponents.Dropdown do
         <button
           type="button"
           class={[
+            @disabled && "pc-button--disabled",
             trigger_button_classes(@label, @trigger_element),
             @trigger_class
           ]}
-          {js_attributes("button", @js_lib, @options_container_id)}
+          {if !@disabled, do: js_attributes("button", @js_lib, @options_container_id), else: %{}}
           aria-haspopup="true"
         >
           <span class="sr-only">Open options</span>
